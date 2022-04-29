@@ -1,7 +1,7 @@
 # Local imports
 import datetime
 
-# Third part imports
+# Third party imports
 from pydantic import BaseModel, Field
 
 from ms import app
@@ -9,10 +9,10 @@ from ms.functions import get_model_response
 
 
 model_name = "Breast Cancer Wisconsin (Diagnostic)"
-model_file = 'model_binary.dat.gz'
 version = "v1.0.0"
 
 
+# Input for data validation
 class Input(BaseModel):
     concavity_mean: float = Field(..., gt=0)
     concave_points_mean: float = Field(..., gt=0)
@@ -32,6 +32,7 @@ class Input(BaseModel):
         }
 
 
+# Ouput for data validation
 class Output(BaseModel):
     label: str
     prediction: int
