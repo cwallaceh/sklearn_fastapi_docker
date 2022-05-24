@@ -65,11 +65,11 @@ Finally we can test our web application by running:
 
 Now that we have our web application running, we can use the Dockerfile to create an image for running our web application inside a container
 
-`$ docker build . -t sklearn_flask_docker`
+`$ docker build . -t sklearn_fastapi_docker`
 
 And now we can test our application using Docker
 
-`$ docker run -p 8000:8000 sklearn_flask_docker`
+`$ docker run -p 8000:8000 sklearn_fastapi_docker`
 
 # Test!
 
